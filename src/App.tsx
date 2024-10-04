@@ -1,35 +1,32 @@
-import { useEffect } from 'react';
-import { useLocation, Routes, Route, Link } from 'react-router-dom';
+import "preline/preline";
+import { useEffect } from "react";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 
-import Home from './pages/Home';
-import Accordion from './pages/Accordion';
-import Carousel from './pages/Carousel';
-import Collapse from './pages/Collapse';
-import Dropdown from './pages/Dropdown';
-import InputNumber from './pages/InputNumber';
-import Overlay from './pages/Overlay';
-import PinInput from './pages/PinInput';
-import RemoveElement from './pages/RemoveElement';
-import Scrollspy from './pages/Scrollspy';
-import Select from './pages/Select';
-import Stepper from './pages/Stepper';
-import StrongPassword from './pages/StrongPassword';
-import Tabs from './pages/Tabs';
-import ToggleCount from './pages/ToggleCount';
-import TogglePassword from './pages/TogglePassword';
-import Tooltip from './pages/Tooltip';
+import Home from "./pages/Home";
+import Accordion from "./pages/Accordion";
+import Carousel from "./pages/Carousel";
+import Collapse from "./pages/Collapse";
+import Dropdown from "./pages/Dropdown";
+import InputNumber from "./pages/InputNumber";
+import Overlay from "./pages/Overlay";
+import PinInput from "./pages/PinInput";
+import RemoveElement from "./pages/RemoveElement";
+import Scrollspy from "./pages/Scrollspy";
+import Select from "./pages/Select";
+import Stepper from "./pages/Stepper";
+import StrongPassword from "./pages/StrongPassword";
+import Tabs from "./pages/Tabs";
+import ToggleCount from "./pages/ToggleCount";
+import TogglePassword from "./pages/TogglePassword";
+import Tooltip from "./pages/Tooltip";
+import Charts from "./pages/Charts";
 
 
 function App() {
   const location = useLocation();
 
   useEffect(() => {
-    require('preline/preline');
-  }, []);
-
-  useEffect(() => {
-    // @ts-ignore
-    HSStaticMethods.autoInit();
+    window.HSStaticMethods.autoInit();
   }, [location.pathname]);
 
   return (
@@ -54,7 +51,7 @@ function App() {
             <Link to="/toggle-count">Toggle Count</Link>
             <Link to="/toggle-password">Toggle Password</Link>
             <Link to="/tooltip">Tooltip</Link>
-     
+            <Link to="/charts">Charts</Link>
           </div>
         </div>
       </header>
@@ -78,7 +75,7 @@ function App() {
           <Route path="/toggle-count" element={<ToggleCount />} />
           <Route path="/toggle-password" element={<TogglePassword />} />
           <Route path="/tooltip" element={<Tooltip />} />
-      
+          <Route path="/charts" element={<Charts />} />
         </Routes>
       </div>
     </>
