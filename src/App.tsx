@@ -19,6 +19,7 @@ import Tabs from "./pages/Tabs";
 import ToggleCount from "./pages/ToggleCount";
 import TogglePassword from "./pages/TogglePassword";
 import Tooltip from "./pages/Tooltip";
+import Charts from "./pages/Charts";
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
             <Link to="/toggle-count">Toggle Count</Link>
             <Link to="/toggle-password">Toggle Password</Link>
             <Link to="/tooltip">Tooltip</Link>
+            <Link to="/charts">Charts</Link>
           </div>
         </div>
       </header>
@@ -73,6 +75,7 @@ function App() {
           <Route path="/toggle-count" element={<ToggleCount />} />
           <Route path="/toggle-password" element={<TogglePassword />} />
           <Route path="/tooltip" element={<Tooltip />} />
+          <Route path="/charts" element={<Charts />} />
         </Routes>
       </div>
     </>
